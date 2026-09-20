@@ -24,7 +24,7 @@ After installation is complete start ATY by running:
 aty
 ```
 
-On first launch, ATY asks for your provider, endpoint, API key, model, and reasoning effort.
+On first launch, ATY asks for your provider, endpoint, API key, model, and reasoning effort. Check configuration examples on [this page](https://github.com/TheR1D/aty/wiki/Config-Examples).
 
 ## Usage
 
