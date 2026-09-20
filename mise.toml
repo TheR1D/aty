@@ -1,0 +1,20 @@
+[tools]
+go = "1.27.1"
+golangci-lint = "2.13.1"
+goreleaser = "2.17.1"
+
+[env]
+GOTOOLCHAIN = "local"
+
+[tasks.build]
+run = "go build -o bin/aty ./cmd/aty"
+
+[tasks.test]
+run = "go test ./..."
+
+[tasks.lint]
+run = "golangci-lint run"
+
+[tasks.dist]
+description = "Cross-build darwin and linux binaries with goreleaser"
+run = "goreleaser build --snapshot --clean"

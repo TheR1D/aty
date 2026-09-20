@@ -1,0 +1,32 @@
+version: 2
+
+project_name: aty
+
+builds:
+  - id: aty
+    main: ./cmd/aty
+    binary: aty
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+      - linux
+    goarch:
+      - amd64
+      - arm64
+    flags:
+      - -trimpath
+
+archives:
+  - formats: [binary]
+    name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
+
+checksum:
+  name_template: checksums.txt
+  algorithm: sha256
+
+changelog:
+  sort: asc
+
+snapshot:
+  version_template: "{{ incpatch .Version }}-next"

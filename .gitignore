@@ -1,0 +1,4 @@
+bin/
+dist/
+/aty
+.DS_Store
